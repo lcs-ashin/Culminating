@@ -99,9 +99,11 @@ turtle.drawSelf()
 
 
 // Start at
+turtle.penUp()
 turtle.left(by: 90)
 turtle.forward(steps: 25)
 turtle.right(by: 90)
+turtle.penDown()
 
 
 for _ in 1...6 {
