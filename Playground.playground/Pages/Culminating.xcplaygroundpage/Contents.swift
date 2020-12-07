@@ -124,6 +124,7 @@ for _ in 1...6 {
       
 }
     
+turtle.copySVGToClipboard()
     
 
 /*:
