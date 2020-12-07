@@ -68,13 +68,13 @@ let turtle = Tortoise(drawingUpon: canvas)
 //    }
 //}
 
-// Get the turtle away from the bottom left corner
-turtle.penUp()
-turtle.forward(steps: 175)
-turtle.left(by: 90)
-turtle.forward(steps: 200)
-turtle.right(by: 90)
-turtle.penDown()
+//// Get the turtle away from the bottom left corner
+//turtle.penUp()
+//turtle.forward(steps: 175)
+//turtle.left(by: 90)
+//turtle.forward(steps: 200)
+//turtle.right(by: 90)
+//turtle.penDown()
 
 // Draw an arrow
 func drawArrow() {
@@ -95,8 +95,36 @@ func drawArrow() {
 
 }
 
-
 turtle.drawSelf()
+
+
+// Start at
+turtle.left(by: 90)
+turtle.forward(steps: 25)
+turtle.right(by: 90)
+
+
+for _ in 1...6 {
+        
+    
+    for _ in 1...4 {
+            drawArrow()
+            turtle.penUp()
+            turtle.forward(steps: 125)
+            turtle.penDown()
+           }
+
+    turtle.penUp()
+    turtle.left(by: 180)
+    turtle.forward(steps: 500)
+    turtle.right(by: 90)
+    turtle.forward(steps: 100)
+    turtle.right(by: 90)
+    turtle.penDown()
+      
+}
+    
+    
 
 /*:
  ## Show the Assistant Editor
