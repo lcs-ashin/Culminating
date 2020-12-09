@@ -44,6 +44,7 @@ PlaygroundPage.current.liveView = canvas
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
 
  */
+canvas.highPerformance = true
 
 // Create turtle
 let turtle = Tortoise(drawingUpon: canvas)
@@ -103,6 +104,12 @@ for _ in 1...6 {
     turtle.penDown()
 
 }
+
+canvas.highPerformance = false
+turtle.penUp()
+turtle.forward(steps: 1)
+
+turtle.copySVGToClipboard() 
 
 
 /*:
