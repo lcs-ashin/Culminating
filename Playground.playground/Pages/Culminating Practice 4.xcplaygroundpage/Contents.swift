@@ -44,6 +44,7 @@ PlaygroundPage.current.liveView = canvas
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
 
  */
+// Speed of drawing 
 canvas.highPerformance = true
 
 // Create turtle
@@ -82,7 +83,7 @@ func drawPolygon() {
     
 }
 
-
+// Polygons in rows
 for _ in 1...6 {
     
     for _ in 1...5 {

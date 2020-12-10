@@ -105,7 +105,7 @@ turtle.forward(steps: 125)
 turtle.right(by: 90)
 turtle.penDown()
 
-
+// Arrows in rows (second, fourth, and sixth rows)
 for _ in 1...3 {
         
     
