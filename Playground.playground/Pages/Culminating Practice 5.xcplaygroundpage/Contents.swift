@@ -17,7 +17,7 @@
  Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
  */
 let preferredWidth = 500
-let preferredHeight = 600
+let preferredHeight = Int(sqrt(625 - (625 / 4)) * 28)
 /*:
  ## Required code
  
@@ -74,7 +74,7 @@ func drawStar() {
     
 }
 
-// First stars
+// First stars (first, third, fifth, and seventh rows)
 for _ in 1...4 {
     
     for _ in 1...5 {
@@ -96,45 +96,39 @@ for _ in 1...4 {
     
 }
 
+
 turtle.penUp()
+turtle.forward(steps: 50)
 turtle.right(by: 90)
-turtle.forward(steps: Int(sqrt(625 - (625 / 4)) * 22))
-turtle.right(by: 90)
-turtle.forward(steps: 450)
-turtle.right(by: 180)
+turtle.forward(steps: Int(sqrt(625 - (625 / 4)) * 28))
+turtle.left(by: 90)
 turtle.penDown()
 
-drawStar()
-// Second stars
-//for _ in 1...4 {
-//
-//    for _ in 1...4 {
-//
-//        turtle.penUp()
-//        turtle.forward(steps: 50)
-//        turtle.left(by: 90)
-//        turtle.forward(steps: Int(sqrt(625 - (625 / 4)) * 4))
-//        turtle.right(by: 90)
-//
-//        drawStar()
-//        turtle.penUp()
-//        turtle.forward(steps: 100)
-//        turtle.penDown()
+
+// Second stars (second, fourth, and sixth rows)
+for _ in 1...3 {
+
+    for _ in 1...4 {
+
+        drawStar()
+        turtle.penUp()
+        turtle.forward(steps: 100)
+        turtle.penDown()
         
-//    }
+    }
     
-//    turtle.penUp()
-//    turtle.left(by: 180)
-//    turtle.forward(steps: 500)
-//    turtle.right(by: 90)
-//    turtle.forward(steps: Int(sqrt(625 - (625 / 4)) * 8))
-//    turtle.right(by: 90)
-//    turtle.penDown()
+    turtle.penUp()
+    turtle.left(by: 180)
+    turtle.forward(steps: 400)
+    turtle.right(by: 90)
+    turtle.forward(steps: Int(sqrt(625 - (625 / 4)) * 8))
+    turtle.right(by: 90)
+    turtle.penDown()
     
-//}
-
-
+}
 turtle.drawSelf()
+
+
 
 /*:
  ## Show the Assistant Editor
