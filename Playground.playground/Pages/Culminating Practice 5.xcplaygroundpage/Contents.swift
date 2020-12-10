@@ -74,6 +74,20 @@ func drawStar() {
     
 }
 
+// Draw boomerang
+func drawBoomerang() {
+    
+    for _ in 1...3 {
+    turtle.forward(steps: 25)
+    turtle.right(by: 60)
+    turtle.forward(steps: 50)
+    turtle.left(by: 120)
+    turtle.forward(steps: 25)
+    turtle.left(by: 60)
+    }
+    
+}
+
 // First stars (first, third, fifth, and seventh rows)
 for _ in 1...4 {
     
@@ -96,7 +110,7 @@ for _ in 1...4 {
     
 }
 
-
+// Set the position of second stars
 turtle.penUp()
 turtle.forward(steps: 50)
 turtle.right(by: 90)
@@ -126,9 +140,61 @@ for _ in 1...3 {
     turtle.penDown()
     
 }
+
+// Set the start position of boomerang
+turtle.penUp()
+turtle.right(by: 90)
+turtle.forward(steps: Int(sqrt(625 - (625 / 4)) * 26))
+turtle.left(by:90)
+turtle.penDown()
+
+
+// Draw boomerangs in rows (first, third, fifth, and seventh)
+for _ in 1...4 {
+    for _ in 1...4{
+        
+        drawBoomerang()
+        turtle.penUp()
+        turtle.forward(steps: 100)
+        turtle.penDown()
+        
+    }
+    
+    turtle.penUp()
+    turtle.left(by: 180)
+    turtle.forward(steps: 400)
+    turtle.right(by: 90)
+    turtle.forward(steps: Int(sqrt(625 - (625 / 4)) * 8))
+    turtle.right(by: 90)
+    turtle.penDown()
+
+}
+
+// Set the start position of second bomerangs
+turtle.penUp()
+turtle.right(by: 90)
+turtle.forward(steps: Int(sqrt(625 - (625 / 4)) * 24))
+turtle.right(by:90)
+turtle.forward(steps: 50)
+turtle.left(by: 180)
+turtle.penDown()
+
+
+//// Draw boomerangs in rows (second, fourth, and sixth)
+//for _ in 1...3 {
+//    for _ in 1...5 {
+//
+//        drawBoomerang()
+//        turtle.penUp()
+//        turtle.forward(steps: 100)
+//        turtle.penDown()
+//
+//    }
+//}
+
+
+
 turtle.drawSelf()
-
-
 
 /*:
  ## Show the Assistant Editor
