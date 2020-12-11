@@ -49,13 +49,6 @@ PlaygroundPage.current.liveView = canvas
 let turtle = Tortoise(drawingUpon: canvas)
 
 
-//turtle.penUp()
-//turtle.forward(steps: 100)
-//turtle.left(by: 90)
-//turtle.forward(steps: 100)
-//turtle.right(by: 90)
-//turtle.penDown()
-
 // Draw stars
 turtle.penUp()
 turtle.left(by: 90)
@@ -173,28 +166,36 @@ for _ in 1...4 {
 // Set the start position of second bomerangs
 turtle.penUp()
 turtle.right(by: 90)
-turtle.forward(steps: Int(sqrt(625 - (625 / 4)) * 24))
+turtle.forward(steps: Int(sqrt(625 - (625 / 4)) * 28))
 turtle.right(by:90)
 turtle.forward(steps: 50)
 turtle.left(by: 180)
 turtle.penDown()
 
 
-//// Draw boomerangs in rows (second, fourth, and sixth)
-//for _ in 1...3 {
-//    for _ in 1...5 {
-//
-//        drawBoomerang()
-//        turtle.penUp()
-//        turtle.forward(steps: 100)
-//        turtle.penDown()
-//
-//    }
-//}
+// Draw boomerangs in rows (second, fourth, and sixth)
+for _ in 1...3 {
+    for _ in 1...5 {
+
+        drawBoomerang()
+        turtle.penUp()
+        turtle.forward(steps: 100)
+        turtle.penDown()
+
+    }
+    
+    turtle.penUp()
+    turtle.left(by: 180)
+    turtle.forward(steps: 500)
+    turtle.right(by: 90)
+    turtle.forward(steps: Int(sqrt(625 - (625 / 4)) * 8))
+    turtle.right(by: 90)
+    turtle.penDown()
+    
+}
 
 
 
-turtle.drawSelf()
 
 /*:
  ## Show the Assistant Editor
