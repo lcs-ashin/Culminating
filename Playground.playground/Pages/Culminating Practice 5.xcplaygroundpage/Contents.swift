@@ -45,6 +45,9 @@ PlaygroundPage.current.liveView = canvas
 
  */
 
+// Speed of drawing
+canvas.highPerformance = true
+
 // Create turtle
 let turtle = Tortoise(drawingUpon: canvas)
 
@@ -193,6 +196,15 @@ for _ in 1...3 {
     turtle.penDown()
     
 }
+
+// Speed of drawing
+canvas.highPerformance = false
+
+turtle.penUp()
+turtle.forward(steps: 1)
+
+turtle.copySVGToClipboard()
+
 
 
 
